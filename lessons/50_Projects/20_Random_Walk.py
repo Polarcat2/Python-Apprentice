@@ -61,7 +61,25 @@ def random_walk(walker, steps):
 
     # Your code here
 
+import turtle
 
+screen = turtle.screen()
+screen.setup(width=600, height=600)
+
+walker = turtle.Turtle()
+walker.shape('turtle')
+walker.penup()
+walker.speed(3)
+walker.goto(0, 0)
+walker.pendown()
+
+direction = random.choice(["N", "E", "S", "W"])
+
+walker.setheading("N")
+
+walker.right(100)
+
+steps(10)
 
 # Start the random walk
 random_walk(walker, 200)
